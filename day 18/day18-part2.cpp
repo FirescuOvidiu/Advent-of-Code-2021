@@ -44,10 +44,12 @@ int main()
         v.push_back(aux2);
     }
 
-    for (int i = 0; i < v.size() -2 ; i++)
+    for (int i = 0; i < v.size()  ; i++)
     {
-        for (int j = i + 1; j < v.size(); j++)
+        for (int j =0; j < v.size(); j++)
         {
+			if(v[i]==v[j])
+				continue;
             auto keepV = v[i];
             v[i].insert(begin(v[i]), '[' + aux);
             v[i].push_back(',' + aux);
